@@ -1,6 +1,8 @@
-# Azure VNet Terraform module
-A Terraform module which configures your Azure VNet.  
-[![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://www.blackbird.cloud)
+<!-- BEGIN_TF_DOCS -->
+# Terraform Azurerm Vnet Module
+Terraform module to create an Azure VNet
+
+[![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://blackbird.cloud)
 
 ## Example
 ```hcl
@@ -13,7 +15,7 @@ module "network" {
   resource_group_location = "westeuropoe"
   vnet_name               = "your-vnet"
   address_spaces          = ["10.2.0.0/16"]
-  subnet_prefixes         = ["10.2.0.0/19", "10.2.32.0/19", "10.2.64.0/19", "10.2.128.0/19"]
+  subnet_prefixes         = ["10.2.0.0/19", "10.2.32.0/19", "10.2.64.0/19", "10.2.96.0/19"]
   subnet_names            = ["cluster", "database", "services", "public"]
   use_for_each            = false
 
@@ -93,4 +95,5 @@ Checkout our other :point\_right: [terraform modules](https://registry.terraform
 
 ## Copyright
 
-Copyright © 2017-2023 [Blackbird Cloud](https://www.blackbird.cloud)
+Copyright © 2017-2024 [Blackbird Cloud](https://blackbird.cloud)
+<!-- END_TF_DOCS -->
